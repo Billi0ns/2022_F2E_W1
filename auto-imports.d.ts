@@ -46,6 +46,10 @@ declare global {
   const isRef: typeof import('vue')['isRef']
   const makeDestructurable: typeof import('@vueuse/core')['makeDestructurable']
   const markRaw: typeof import('vue')['markRaw']
+  const mq2Xl: typeof import('./src/composables/screen')['mq2Xl']
+  const mqLg: typeof import('./src/composables/screen')['mqLg']
+  const mqMd: typeof import('./src/composables/screen')['mqMd']
+  const mqXl: typeof import('./src/composables/screen')['mqXl']
   const nextTick: typeof import('vue')['nextTick']
   const onActivated: typeof import('vue')['onActivated']
   const onBeforeMount: typeof import('vue')['onBeforeMount']
@@ -322,6 +326,10 @@ declare module 'vue' {
     readonly isRef: UnwrapRef<typeof import('vue')['isRef']>
     readonly makeDestructurable: UnwrapRef<typeof import('@vueuse/core')['makeDestructurable']>
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
+    readonly mq2Xl: UnwrapRef<typeof import('./src/composables/screen')['mq2Xl']>
+    readonly mqLg: UnwrapRef<typeof import('./src/composables/screen')['mqLg']>
+    readonly mqMd: UnwrapRef<typeof import('./src/composables/screen')['mqMd']>
+    readonly mqXl: UnwrapRef<typeof import('./src/composables/screen')['mqXl']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
     readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>

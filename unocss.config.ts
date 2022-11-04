@@ -87,6 +87,12 @@ export default defineConfig({
         2: '#FFF385',
       },
     },
+    breakpoints: {
+      md: '769px',
+      lg: '981px',
+      xl: '1105px',
+      '2xl': '1185px',
+    },
   },
   // transformers: [
   //   transformerDirectives(),
