@@ -1,8 +1,6 @@
 {
-  "cSpell.words": [
-    "Vitesse"
-  ],
-  "prettier.enable": false,
+  "cSpell.words": ["Vitesse"],
+  "prettier.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -10,5 +8,7 @@
     "*.css": "postcss"
   },
   "editor.formatOnSave": true,
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "eslint.format.enable": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

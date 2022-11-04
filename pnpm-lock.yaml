@@ -9,8 +9,10 @@ specifiers:
   '@vue/test-utils': ^2.2.1
   '@vueuse/core': ^9.4.0
   eslint: ^8.26.0
+  eslint-config-prettier: ^8.5.0
   jsdom: ^20.0.2
   pnpm: ^7.14.1
+  prettier: ^2.7.1
   sass: ^1.56.0
   taze: ^0.8.3
   typescript: ^4.8.4
@@ -37,8 +39,10 @@ devDependencies:
   '@vitejs/plugin-vue': 3.2.0_vite@3.2.2+vue@3.2.41
   '@vue/test-utils': 2.2.1_vue@3.2.41
   eslint: 8.26.0
+  eslint-config-prettier: 8.5.0_eslint@8.26.0
   jsdom: 20.0.2
   pnpm: 7.14.1
+  prettier: 2.7.1
   sass: 1.56.0
   taze: 0.8.3
   typescript: 4.8.4
@@ -1853,6 +1857,15 @@ packages:
       optionator: 0.8.3
     optionalDependencies:
       source-map: 0.6.1
+    dev: true
+
+  /eslint-config-prettier/8.5.0_eslint@8.26.0:
+    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.26.0
     dev: true
 
   /eslint-import-resolver-node/0.3.6:
@@ -3786,6 +3799,12 @@ packages:
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /proc-log/2.0.1:
