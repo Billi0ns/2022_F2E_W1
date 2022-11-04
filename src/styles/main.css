@@ -10,7 +10,8 @@ body,
   font-family: 'Monument Extended';
   font-style: normal;
   font-weight: 400;
-  src: url('~/assets/fonts/ppmonumentextended-regular-webfont.woff2') format('woff2'),
+  src: url('~/assets/fonts/ppmonumentextended-regular-webfont.woff2')
+      format('woff2'),
     url('~/assets/fonts/ppmonumentextended-regular-webfont.woff') format('woff');
   font-display: swap;
 }
