@@ -34,6 +34,30 @@ export default defineConfig({
     ['font-notosans', { 'font-family': 'Noto Sans TC', 'font-style': 'normal' }],
     ['font-pilot', { 'font-family': 'Pilot Command Italic', 'font-weight': 400, 'font-style': 'italic' }],
   ],
+  theme: {
+    colors: {
+      neutral: {
+        1: '#FFFFFF', // class="bg-neutral-1"
+        2: '#858993',
+        3: '#151F3F',
+        4: '#0E1835',
+        5: '#06102B',
+        6: '#000000',
+      },
+      primary: {
+        1: '#9DA4FF',
+        2: '#DCDEFF',
+        3: '#6E77E9',
+      },
+      green: {
+        1: '#55FFAD',
+      },
+      yellow: {
+        1: '#FFE34E',
+        2: '#FFF385',
+      },
+    },
+  },
   // transformers: [
   //   transformerDirectives(),
   //   transformerVariantGroup(),
