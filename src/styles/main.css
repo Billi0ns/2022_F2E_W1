@@ -6,6 +6,20 @@ body,
   padding: 0;
 }
 
-html.dark {
-  background: #121212;
+@font-face {
+  font-family: 'Monument Extended';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~/assets/fonts/ppmonumentextended-regular-webfont.woff2') format('woff2'),
+    url('~/assets/fonts/ppmonumentextended-regular-webfont.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pilot Command Italic';
+  font-style: italic;
+  font-weight: 400;
+  src: url('~/assets/fonts/pilotcommand1_2ital-webfont.woff2') format('woff2'),
+    url('~/assets/fonts/pilotcommand1_2ital-webfont.woff') format('woff');
+  font-display: swap;
 }

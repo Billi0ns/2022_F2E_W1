@@ -28,6 +28,12 @@ export default defineConfig({
       },
     }),
   ],
+  rules: [
+    ['font-monument', { 'font-family': 'Monument Extended', 'font-weight': 400, 'font-style': 'normal' }],
+    ['font-montserrat', { 'font-family': 'Montserrat, sans-serif', 'font-weight': 500, 'font-style': 'normal' }],
+    ['font-notosans', { 'font-family': 'Noto Sans TC', 'font-style': 'normal' }],
+    ['font-pilot', { 'font-family': 'Pilot Command Italic', 'font-weight': 400, 'font-style': 'italic' }],
+  ],
   // transformers: [
   //   transformerDirectives(),
   //   transformerVariantGroup(),
