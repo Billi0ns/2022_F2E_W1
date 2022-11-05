@@ -22,7 +22,7 @@ const closeMenu = () => {
       p="16px"
       bg="neutral-5"
       position="relative"
-      z="1"
+      z="2"
       md="px-32px py-24px h-90px"
     >
       <div
@@ -79,6 +79,7 @@ const closeMenu = () => {
       bg="neutral-5"
       p="t-56px x-16px"
       md="hidden"
+      z="1"
     >
       <div m="b-32px">關卡資訊</div>
       <div m="b-32px">攻略資源</div>

@@ -9,8 +9,9 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Counter: typeof import('./src/components/Counter.vue')['default']
     F2e_logo: typeof import('./src/components/icons/f2e_logo.vue')['default']
-    Footer: typeof import('./src/components/Footer.vue')['default']
+    Hero: typeof import('./src/components/Hero.vue')['default']
     IcCross: typeof import('./src/components/icons/IcCross.vue')['default']
+    IcStar: typeof import('./src/components/icons/IcStar.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
