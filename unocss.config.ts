@@ -76,7 +76,7 @@ export default defineConfig({
       },
       primary: {
         1: '#9DA4FF',
-        2: '#DCDEFF',
+        2: '#C4C8FF',
         3: '#6E77E9',
       },
       green: {
