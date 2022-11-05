@@ -4,8 +4,8 @@ import {
   presetIcons,
   presetUno,
   presetWebFonts,
-  // transformerDirectives,
-  // transformerVariantGroup,
+  transformerDirectives,
+  transformerVariantGroup,
 } from 'unocss';
 
 export default defineConfig({
@@ -94,8 +94,5 @@ export default defineConfig({
       '2xl': '1185px',
     },
   },
-  // transformers: [
-  //   transformerDirectives(),
-  //   transformerVariantGroup(),
-  // ],
+  transformers: [transformerDirectives(), transformerVariantGroup()],
 });
