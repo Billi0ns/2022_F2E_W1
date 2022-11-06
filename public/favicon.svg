@@ -1,9 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <style>
-    path { fill: #222; }
-    @media (prefers-color-scheme: dark) {
-      path { fill: #ffffff; }
-    }
-  </style>
-  <path d="M27.562 26L17.17 8.928l2.366-3.888L17.828 4L16 7.005L14.17 4l-1.708 1.04l2.366 3.888L4.438 26H2v2h28v-2zM16 10.85L25.22 26H17v-8h-2v8H6.78z" />
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="192" height="192" fill="#081029"/>
+<path d="M61.0555 69.8918L107.2 43.2502L153.345 69.8918V123.175L107.2 149.817L61.0555 123.175V69.8918Z" stroke="#55FFAD" stroke-width="21.3333"/>
+<path d="M38.6556 69.8918L84.8002 43.2502L130.945 69.8918V123.175L84.8002 149.817L38.6556 123.175V69.8918Z" stroke="#9DA4FF" stroke-width="21.3333"/>
+<path d="M49.8553 69.8918L95.9999 43.2502L142.145 69.8918V123.175L95.9999 149.817L49.8553 123.175V69.8918Z" stroke="white" stroke-width="21.3333"/>
 </svg>
