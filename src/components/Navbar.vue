@@ -21,9 +21,9 @@ const closeMenu = () => {
       items="center"
       p="16px"
       bg="neutral-5"
-      position="relative"
+      position="fixed"
       z="2"
-      md="px-32px py-24px h-90px"
+      md="relative px-32px py-24px h-90px"
     >
       <div
         class="hamburger"
@@ -73,7 +73,7 @@ const closeMenu = () => {
       h="294px"
       flex="~ col"
       align="center"
-      position="absolute top-72px left-0 right-0"
+      position="fixed top-72px left-0 right-0"
       font="notosans leading-20px"
       text="neutral-2"
       bg="neutral-5"
@@ -103,6 +103,7 @@ const closeMenu = () => {
         <IcCross class="transform scale-140" text="neutral-1" />
       </div>
     </div>
+    <div class="fixed-navbar-padding" w="full" h="72px" md="hidden"></div>
   </div>
 </template>
 
