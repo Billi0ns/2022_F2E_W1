@@ -11,8 +11,10 @@ declare module '@vue/runtime-core' {
     F2e_logo: typeof import('./src/components/icons/f2e_logo.vue')['default']
     Hero: typeof import('./src/components/Hero.vue')['default']
     IcCross: typeof import('./src/components/icons/IcCross.vue')['default']
+    IcDialog: typeof import('./src/components/icons/IcDialog.vue')['default']
     IcStar: typeof import('./src/components/icons/IcStar.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
+    Questions: typeof import('./src/components/Questions.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

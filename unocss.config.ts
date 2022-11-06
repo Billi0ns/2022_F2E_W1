@@ -91,7 +91,7 @@ export default defineConfig({
       md: '769px',
       lg: '981px',
       xl: '1105px',
-      '2xl': '1185px',
+      x2l: '1185px',
     },
   },
   transformers: [transformerDirectives(), transformerVariantGroup()],
