@@ -84,13 +84,15 @@ const showDesktopAnimation = () => {
     yoyo: true,
     ease: 'power1.inOut',
   });
-  tl2.fromTo(
+
+  // Get scroll length of marquee by dividing the amount of v-for items
+  const scrollLength = elMarquee.value.scrollWidth / 10;
+  tl2.to(
     elMarquee.value,
-    { x: -395 },
     {
-      duration: 1.5,
+      duration: 2,
       ease: 'none',
-      x: '+=265',
+      x: `+=${scrollLength * 2}`,
       repeat: -1,
     },
     '<'
@@ -190,7 +192,11 @@ onMounted(() => {
       </div>
     </div>
     <div class="container max-w-full overflow-hidden">
-      <div ref="elMarquee" class="marquee flex items-center">
+      <div
+        ref="elMarquee"
+        class="marquee flex items-center"
+        transform="~ translate-x-[-40%]"
+      >
         <template v-for="_ in 10" :key="_">
           <div class="marquee-text fill-white whitespace-nowrap">JOIN US</div>
           <IcStar class="min-w-30px mx-30px"></IcStar>
@@ -229,5 +235,7 @@ onMounted(() => {
   font-size: 28px;
   line-height: 34px;
   letter-spacing: 0.08em;
+
+  --at-apply: x2l:(text-48px leading-57.6px);
 }
 </style>
