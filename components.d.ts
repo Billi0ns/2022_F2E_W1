@@ -12,6 +12,7 @@ declare module '@vue/runtime-core' {
     Hero: typeof import('./src/components/Hero.vue')['default']
     IcCross: typeof import('./src/components/icons/IcCross.vue')['default']
     IcDialog: typeof import('./src/components/icons/IcDialog.vue')['default']
+    IcLightning: typeof import('./src/components/icons/IcLightning.vue')['default']
     IcPosterBadge1: typeof import('./src/components/icons/IcPosterBadge1.vue')['default']
     IcPosterBadge2: typeof import('./src/components/icons/IcPosterBadge2.vue')['default']
     IcStar: typeof import('./src/components/icons/IcStar.vue')['default']
@@ -21,5 +22,6 @@ declare module '@vue/runtime-core' {
     Questions: typeof import('./src/components/Questions.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Themes: typeof import('./src/components/Themes.vue')['default']
   }
 }
