@@ -170,7 +170,7 @@ onMounted(() => {
       sm="top-36.77vw text-size-1.67vw leading-2.5vw"
     >
       <div>前端工程師</div>
-      <IcCross class="mx-8.264vw" sm="mx-3.72vw" />
+      <IcCross class="mx-8.264vw w-5vw h-5vw" sm="mx-3.72vw w-3vw h-3vw" />
       <div>UI設計師</div>
     </div>
 
