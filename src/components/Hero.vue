@@ -171,10 +171,11 @@ onMounted(() => {
       >
         <img
           ref="elCodeIcon"
-          class="icon-code"
+          class="icon-code pointer-events-none"
           :src="getImageUrl('code.png')"
           alt="an icon of code"
           transform="~ rotate-[-19.31deg] scale-80"
+          select="none"
         />
       </div>
 
@@ -185,9 +186,10 @@ onMounted(() => {
       >
         <img
           ref="elDashboardIcon"
-          class="icon-dashboard"
+          class="icon-dashboard pointer-events-none"
           :src="getImageUrl('dashboard.png')"
           alt="an icon of dashboard"
+          select="none"
         />
       </div>
     </div>

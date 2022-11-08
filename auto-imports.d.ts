@@ -49,6 +49,7 @@ declare global {
   const markRaw: typeof import('vue')['markRaw']
   const mqLg: typeof import('./src/composables/screen')['mqLg']
   const mqMd: typeof import('./src/composables/screen')['mqMd']
+  const mqSm: typeof import('./src/composables/screen')['mqSm']
   const mqX2l: typeof import('./src/composables/screen')['mqX2l']
   const mqXl: typeof import('./src/composables/screen')['mqXl']
   const nextTick: typeof import('vue')['nextTick']
@@ -330,6 +331,7 @@ declare module 'vue' {
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
     readonly mqLg: UnwrapRef<typeof import('./src/composables/screen')['mqLg']>
     readonly mqMd: UnwrapRef<typeof import('./src/composables/screen')['mqMd']>
+    readonly mqSm: UnwrapRef<typeof import('./src/composables/screen')['mqSm']>
     readonly mqX2l: UnwrapRef<typeof import('./src/composables/screen')['mqX2l']>
     readonly mqXl: UnwrapRef<typeof import('./src/composables/screen')['mqXl']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>

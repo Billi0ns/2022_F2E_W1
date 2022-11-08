@@ -4,4 +4,5 @@
   <Navbar />
   <Hero />
   <Questions />
+  <Poster />
 </template>

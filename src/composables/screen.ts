@@ -1,3 +1,4 @@
+export const mqSm = useMediaQuery('(min-width: 651px)');
 export const mqMd = useMediaQuery('(min-width: 769px)');
 export const mqLg = useMediaQuery('(min-width: 981px)');
 export const mqXl = useMediaQuery('(min-width: 1105px)');
