@@ -1,7 +1,12 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="w-full flex flex-col items-center" bg="neutral-4" p="t-76px">
+  <div
+    class="w-full flex flex-col items-center"
+    bg="neutral-4"
+    p="t-76px b-60px"
+    sm="pb-80px"
+  >
     <div class="flex items-center" m="b-36px">
       <IcPacmanLeft></IcPacmanLeft>
       <div
