@@ -6,5 +6,6 @@
   <Questions />
   <Poster />
   <Themes />
+  <Timeline />
   <div class="w-full h-300px bg-neutral-4"></div>
 </template>
