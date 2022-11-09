@@ -22,8 +22,6 @@ const setHoverEffects = () => {
 };
 
 onMounted(() => {
-  setHoverEffects();
-
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.race-text-1',
@@ -52,6 +50,7 @@ onMounted(() => {
       duration: 1,
       opacity: 0,
       y: '200px',
+      onComplete: setHoverEffects,
     },
     '<'
   );
