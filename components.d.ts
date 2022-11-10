@@ -21,6 +21,7 @@ declare module '@vue/runtime-core' {
     IcPosterBadge1: typeof import('./src/components/icons/IcPosterBadge1.vue')['default']
     IcPosterBadge2: typeof import('./src/components/icons/IcPosterBadge2.vue')['default']
     IcStar: typeof import('./src/components/icons/IcStar.vue')['default']
+    IcStar2: typeof import('./src/components/icons/IcStar2.vue')['default']
     IcTapeMobile: typeof import('./src/components/icons/IcTapeMobile.vue')['default']
     IcTriangle: typeof import('./src/components/icons/IcTriangle.vue')['default']
     IcTriangleFlat: typeof import('./src/components/icons/IcTriangleFlat.vue')['default']
@@ -30,6 +31,7 @@ declare module '@vue/runtime-core' {
     Questions: typeof import('./src/components/Questions.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Sponsors: typeof import('./src/components/Sponsors.vue')['default']
     Themes: typeof import('./src/components/Themes.vue')['default']
     Timeline: typeof import('./src/components/Timeline.vue')['default']
   }
