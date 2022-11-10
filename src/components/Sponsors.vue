@@ -33,7 +33,7 @@
       m="b-60px"
       sm="flex-row mb-100px"
     >
-      <div class="sponsor-block" w="160px" h="160px" p="12px" rounded="32px">
+      <div class="sponsor-item" w="160px" h="160px" p="12px" rounded="32px">
         <img
           class="pointer-events-none"
           :src="getImageUrl('sponsor-1.png')"
@@ -41,7 +41,7 @@
           select="none"
         />
       </div>
-      <div class="sponsor-block" w="160px" h="160px" p="12px" rounded="32px">
+      <div class="sponsor-item" w="160px" h="160px" p="12px" rounded="32px">
         <img
           class="pointer-events-none"
           :src="getImageUrl('sponsor-2.png')"
@@ -49,7 +49,7 @@
           select="none"
         />
       </div>
-      <div class="sponsor-block" w="160px" h="160px" p="12px" rounded="32px">
+      <div class="sponsor-item" w="160px" h="160px" p="12px" rounded="32px">
         <img
           class="pointer-events-none"
           :src="getImageUrl('sponsor-3.png')"
@@ -62,7 +62,7 @@
 </template>
 
 <style lang="scss" scoped>
-.sponsor-block {
+.sponsor-item {
   position: relative;
   background: white;
   cursor: pointer;
