@@ -159,6 +159,7 @@ onMounted(() => {
         rounded="100px"
         bg="yellow-1"
         cursor="pointer"
+        hover="bg-yellow-2"
         md="px-[min(5vw,72px)] py-[min(1.388vw,20px)] text-size-[min(1.666vw,24px)]"
       >
         立即報名

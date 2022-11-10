@@ -54,6 +54,7 @@ const closeMenu = () => {
         <div class="navbar-link" m="r-32px">攻略資源</div>
         <div class="navbar-link" m="r-48px">求職專區</div>
         <div
+          class="login-btn"
           font="notosans leading-20px"
           text="center neutral-1"
           p="x-24px y-12px"
@@ -146,5 +147,11 @@ const closeMenu = () => {
       left: 42%;
     }
   }
+}
+
+.login-btn:hover {
+  --at-apply: text-green-1 border-green-1;
+  background: rgba(85, 255, 173, 0.2);
+  box-shadow: 0px 0px 10px rgba(85, 255, 173, 0.6);
 }
 </style>
