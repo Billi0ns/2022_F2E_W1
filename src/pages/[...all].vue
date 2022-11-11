@@ -1,3 +1,4 @@
-<template>
-  <div>Not Found</div>
-</template>
+<route lang="yaml">
+redirect:
+  name: ''
+</route>
