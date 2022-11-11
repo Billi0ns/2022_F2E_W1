@@ -4,6 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const { observerEl, createObserver } = useCustomObserver();
+
 const setHoverEffects = () => {
   const cardElements = document.querySelectorAll('.race-card');
 
@@ -21,14 +23,24 @@ const setHoverEffects = () => {
   });
 };
 
-onMounted(() => {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.race-text-1',
-      start: 'top 50%',
-      end: 'top 1%',
-    },
-  });
+const isAnimationPlayed = ref(false);
+const playAnimation = () => {
+  if (isAnimationPlayed.value) return;
+  isAnimationPlayed.value = true;
+
+  let tl;
+  if (mqX2l.value) {
+    tl = gsap.timeline();
+    tl.set('.contest', { visibility: 'visible' });
+  } else {
+    tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.race-text-1',
+        start: 'top 50%',
+        end: 'top 1%',
+      },
+    });
+  }
 
   let distance = '0px';
   if (mqXl.value) {
@@ -77,11 +89,21 @@ onMounted(() => {
     rotate: '-35',
     y: '-5px',
   });
+};
+
+onMounted(() => {
+  if (mqX2l.value) {
+    const targetEl = document.querySelector('.contest');
+    targetEl?.setAttribute('style', 'visibility: hidden');
+    createObserver(playAnimation);
+    return;
+  }
+  playAnimation();
 });
 </script>
 
 <template>
-  <div class="w-full flex flex-col items-center">
+  <div ref="observerEl" class="contest w-full flex flex-col items-center">
     <div class="w-343px" sm="w-485px" xl="w-856px">
       <div
         font="notosans 700 leading-36px"

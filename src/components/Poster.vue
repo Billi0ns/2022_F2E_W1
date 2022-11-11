@@ -4,6 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const { observerEl, createObserver } = useCustomObserver();
+
 const showMobileAnimation = () => {
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -72,61 +74,90 @@ const showMobileAnimation = () => {
 };
 
 const showDesktopAnimation = () => {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.tape-1',
-      start: 'top 40%',
-      end: 'top 1%',
-    },
-  });
+  let tl;
+  if (mqX2l.value) {
+    tl = gsap.timeline();
+  } else {
+    tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.tape-1',
+        start: 'top 40%',
+        end: 'top 1%',
+      },
+    });
+  }
   tl.to('.tape-1', { xPercent: -20, ease: 'power1.inOut', duration: 2.5 });
   tl.to('.tape-2', { xPercent: 20, ease: 'power1.inOut', duration: 2.5 }, '<');
 
-  tl.from(
+  tl.fromTo(
     ['.poster-title', '.poster-text'],
     {
       scale: 0,
       opacity: 0,
+    },
+    {
+      scale: 1,
+      opacity: 1,
       duration: 2,
     },
     '<'
   );
-  tl.from(
+  tl.fromTo(
     '.hand-1',
     {
       xPercent: 150,
       opacity: 0,
+    },
+    {
+      xPercent: 0,
+      opacity: 1,
       duration: 2,
     },
     '<'
   );
-  tl.from(
+  tl.fromTo(
     '.hand-2',
     {
       xPercent: -150,
       opacity: 0,
+    },
+    {
+      xPercent: 0,
+      opacity: 1,
       duration: 2,
     },
     '<'
   );
-  tl.from(
+  tl.fromTo(
     '.poster-badge-1',
     {
       xPercent: -30,
       yPercent: 20,
       opacity: 0,
       rotate: 45,
+    },
+    {
+      xPercent: 0,
+      yPercent: 0,
+      opacity: 1,
+      rotate: 0,
       duration: 2,
     },
     '<'
   );
-  tl.from(
+  tl.fromTo(
     '.poster-badge-2',
     {
       xPercent: 40,
       yPercent: -50,
       opacity: 0,
       rotate: 45,
+    },
+    {
+      xPercent: 0,
+      yPercent: 0,
+      opacity: 1,
+      rotate: 0,
       duration: 2,
     },
     '<'
@@ -136,6 +167,8 @@ const showDesktopAnimation = () => {
 onMounted(() => {
   if (!mqSm.value) {
     showMobileAnimation();
+  } else if (mqX2l.value) {
+    createObserver(showDesktopAnimation);
   } else {
     showDesktopAnimation();
   }
@@ -144,6 +177,7 @@ onMounted(() => {
 
 <template>
   <div
+    ref="observerEl"
     class="w-full h-175.06vw flex flex-col justify-between relative overflow-hidden"
     sm="h-48.52vw"
   >

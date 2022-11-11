@@ -4,6 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const { observerEl, createObserver } = useCustomObserver();
+
 const showMobileAnimation = () => {
   const tl1 = gsap.timeline({
     scrollTrigger: {
@@ -34,14 +36,23 @@ const showMobileAnimation = () => {
   tl3.from('.card-3', { x: '300px', opacity: 0 });
 };
 
+const isAnimationPlayed = ref(false);
 const showDesktopAnimation = () => {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.cards-container',
-      start: 'top 50%',
-      end: 'top 1%',
-    },
-  });
+  if (isAnimationPlayed.value) return;
+  isAnimationPlayed.value = true;
+
+  let tl;
+  if (mqX2l.value) {
+    tl = gsap.timeline();
+  } else {
+    tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.cards-container',
+        start: 'top 50%',
+        end: 'top 1%',
+      },
+    });
+  }
   tl.from('.theme-description', { y: '100px', opacity: 0, duration: 1 });
   tl.from('.card-1', { y: '300px', opacity: 0, duration: 1 }, '<');
   tl.from('.card-2', { y: '200px', opacity: 0, duration: 1 }, '<');
@@ -54,6 +65,8 @@ const showDesktopAnimation = () => {
 onMounted(() => {
   if (!mqLg.value) {
     showMobileAnimation();
+  } else if (mqX2l.value) {
+    createObserver(showDesktopAnimation);
   } else {
     showDesktopAnimation();
   }
@@ -61,7 +74,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="w-full flex flex-col items-center" p="x-37.5px" overflow="hidden">
+  <div
+    ref="observerEl"
+    class="w-full flex flex-col items-center"
+    p="x-37.5px"
+    overflow="hidden"
+  >
     <div
       class="title"
       w="286px"

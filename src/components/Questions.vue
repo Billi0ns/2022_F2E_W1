@@ -4,15 +4,28 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-onMounted(() => {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.dialog-1',
-      start: 'top 70%',
-      end: 'top 1%',
-      // markers: true,
-    },
-  });
+const { observerEl, createObserver } = useCustomObserver();
+const isAnimationPlayed = ref(false);
+
+const playAnimation = () => {
+  if (isAnimationPlayed.value) return;
+  isAnimationPlayed.value = true;
+
+  let tl;
+  if (mqX2l.value) {
+    tl = gsap.timeline();
+    tl.set('.questions', { visibility: 'visible' });
+  } else {
+    tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.dialog-1',
+        start: 'top 70%',
+        end: 'top 1%',
+        // markers: true,
+      },
+    });
+  }
+
   tl.from('.dialog-1', {
     duration: 0.8,
     ease: 'elastic.out(0.8, 0.2)',
@@ -31,12 +44,23 @@ onMounted(() => {
     scale: 0,
     y: -50,
   });
+};
+
+onMounted(() => {
+  if (mqX2l.value) {
+    const targetEl = document.querySelector('.questions');
+    targetEl?.setAttribute('style', 'visibility: hidden');
+    createObserver(playAnimation);
+    return;
+  }
+  playAnimation();
 });
 </script>
 
 <template>
   <div
-    class="w-full h-510px flex justify-center"
+    ref="observerEl"
+    class="questions w-full h-510px flex justify-center"
     md="h-650px"
     x2l="h-[min(76.25vw,1098px)]"
   >
