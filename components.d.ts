@@ -8,7 +8,6 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Contest: typeof import('./src/components/Contest.vue')['default']
-    Counter: typeof import('./src/components/Counter.vue')['default']
     F2e_logo: typeof import('./src/components/icons/f2e_logo.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     Hero: typeof import('./src/components/Hero.vue')['default']
