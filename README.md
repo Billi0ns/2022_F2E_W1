@@ -1,85 +1,38 @@
-<p align='center'>
-  <img src='https://user-images.githubusercontent.com/11247099/111864893-a457fd00-899e-11eb-9f05-f4b88987541d.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
-</p>
+# The F2E 4th - Week 1
 
-<h6 align='center'>
-<a href="https://vitesse-lite.netlify.app/">Live Demo</a>
-</h6>
+![Web Cover Image](/public/WebCover.png)
 
-<h5 align='center'>
-<b>Lightweight version of <a href="https://github.com/antfu/vitesse">Vitesse</a></b>
-</h5>
+UIUX Designer - [Jenny Wu](https://2022.thef2e.com/users/12061549261447630282)
 
-<br>
+設計稿 - [Figma](https://www.figma.com/file/M2aMcZsEIKBbRdLkj7fCAd/F2E-%2F-W1%3A-%E6%B4%BB%E5%8B%95%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88?node-id=90%3A702)
 
-<p align='center'>
-<b>English</b> | <a href="https://github.com/antfu/vitesse-lite/blob/main/README.zh-CN.md">简体中文</a>
-<!-- Contributors: Thanks for geting interested, however we DON'T accept new transitions to the README, thanks. -->
-</p>
+Demo - [The F2E 4th 活動網站設計](https://2022-thef2e.netlify.app)
 
-## Features
+## 開發心得
 
-- ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite 3](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
+大部分都盡量照著 UI 做 RWD 跟動畫了，除了問題冒泡那段的小裝飾物因爲有點有點懶所以沒加上去...
 
-- 🗂 [File based routing](./src/pages)
+上下捲動跳轉是做到後面才發現要加的，幸好後來想到可以用 scroll-snap 固定滑動到某元件，再配合 Intersection Observer 在元件出現在正中央時觸發動畫，因此調整後桌面版滾動也比較流暢。
+手機版因爲螢幕高度不夠就沒有加了，避免滾動後視窗剛好卡在奇怪的地方
 
-- 📦 [Components auto importing](./src/components)
+寫的時候因為有時間壓力基本上都沒在管複用，搭配 tailwind 劈哩啪啦一堆 code 寫在一起，先求能動就好 XD
 
-- 🎨 [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
+重構這件事等之後有時間心血來潮再說吧 🤣
 
-- 😃 Use icons from any icon sets in [Pure CSS](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
+## 有趣的 bug？
 
-- 🔥 Use the [new `<script setup>` style](https://github.com/vuejs/rfcs/pull/227)
+寫完贊助廠商那塊後，用 Netlify 的連結觀看時發現網站上的廠商區塊都消失了
 
-- ✅ Use [Vitest](http://vitest.dev/) for unit and components testing
+研究一番後發現原來是因為 class 名稱 `.sponsor-block`被 Adguard 的規則擋了，把名稱改為`.sponsor-item`後就正常了
 
-- 🦾 TypeScript, of course
+以後會記得 class 如果有取到跟 `.sponsor`相關的要小心，不然可能就無意間觸發的擋廣告機制了
 
-- ☁️ Deploy on Netlify, zero-config
+## 使用技術
 
-<br>
+- [Vue 3](https://github.com/vuejs/core)
 
-See [Vitesse](https://github.com/antfu/vitesse) for full featureset.
+- [Vite](https://github.com/vitejs/vite)
 
-## Dropped Features from [Vitesse](https://github.com/antfu/vitesse)
+- [UnoCSS](https://github.com/antfu/unocss)
 
-- ~~i18n~~
-- ~~Layouts~~
-- ~~SSG~~
-- ~~PWA~~
-- ~~Markdown~~
-
-## Pre-packed
-
-### UI Frameworks
-
-- [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
-
-### Icons
-
-- [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/)
-- [Pure CSS Icons via UnoCSS](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
-
-### Plugins
-
-- [Vue Router](https://github.com/vuejs/vue-router)
-  - [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
-- [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use Vue Composition API and others without importing
-- [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) - components auto import
-- [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
-
-## Try it now!
-
-### GitHub Template
-
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse-lite/generate).
-
-### Clone to local
-
-If you prefer to do it manually with the cleaner git history
-
-```bash
-npx degit antfu/vitesse-lite my-vitesse-app
-cd my-vitesse-app
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
-```
+- [GSAP](https://greensock.com/gsap/)
