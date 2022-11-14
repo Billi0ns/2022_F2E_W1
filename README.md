@@ -25,7 +25,7 @@ Demo - [The F2E 4th 活動網站設計](https://2022-thef2e.netlify.app)
 
 研究一番後發現原來是因為 class 名稱 `.sponsor-block`被 Adguard 的規則擋了，把名稱改為`.sponsor-item`後就正常了
 
-以後會記得 class 如果有取到跟 `.sponsor`相關的要小心，不然可能就無意間觸發的擋廣告機制了
+以後會記得 class 如果有取到跟 `.sponsor`相關的要小心，不然可能就無意間觸發到擋廣告機制了
 
 ## 使用技術
 
