@@ -36,3 +36,24 @@ Demo - [The F2E 4th 活動網站設計](https://2022-thef2e.netlify.app)
 - [UnoCSS](https://github.com/antfu/unocss)
 
 - [GSAP](https://greensock.com/gsap/)
+
+## Usage
+
+### Development
+
+Just run and visit http://localhost:3333
+
+```bash
+pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+pnpm dev
+```
+
+### Build
+
+To build the App, run
+
+```bash
+pnpm build
+```
+
+And you will see the generated file in `dist` that ready to be served.
