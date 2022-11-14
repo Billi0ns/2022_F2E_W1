@@ -188,7 +188,7 @@ onMounted(() => {
       class="hand-1 absolute top-12.8vw left-34.133vw w-32vw h-32vw pointer-events-none select-none"
       sm="top-12.93vw left-15.3vw w-14vw h-14vw transform -rotate-45 scale-x-[-1]"
     />
-    <div class="h-10.667vw overflow-hidden" sm="h-4.66vw ">
+    <div class="h-10.667vw overflow-hidden -mt-2px" sm="h-4.66vw ">
       <IcTapeMobile class="tape-1 w-auto h-full transform" />
     </div>
 
@@ -224,7 +224,7 @@ onMounted(() => {
       sm="top-3.78vw right-23.96vw w-12vw h-12vw"
     />
 
-    <div class="h-10.667vw overflow-hidden" sm="h-4.66vw">
+    <div class="h-10.667vw overflow-hidden -mb-2px" sm="h-4.66vw">
       <IcTapeMobile class="tape-2 w-auto h-full transform translate-x-[-20%]" />
     </div>
   </div>
