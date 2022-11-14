@@ -15,6 +15,8 @@ declare module '@vue/runtime-core' {
     IcCross: typeof import('./src/components/icons/IcCross.vue')['default']
     IcDialog: typeof import('./src/components/icons/IcDialog.vue')['default']
     IcFlag: typeof import('./src/components/icons/IcFlag.vue')['default']
+    IcHeroLeft: typeof import('./src/components/icons/IcHeroLeft.vue')['default']
+    IcHeroRight: typeof import('./src/components/icons/IcHeroRight.vue')['default']
     IcLightning: typeof import('./src/components/icons/IcLightning.vue')['default']
     IcPacmanLeft: typeof import('./src/components/icons/IcPacmanLeft.vue')['default']
     IcPacmanRight: typeof import('./src/components/icons/IcPacmanRight.vue')['default']

@@ -193,6 +193,19 @@ onMounted(() => {
           select="none"
         />
       </div>
+
+      <IcHeroLeft
+        class="hidden absolute"
+        md="block w-13vw top-14.5vw left-14vw"
+        lg="w-16vw top-16vw"
+        x2l="w-[min(16vw,241px)] top-[min(17.88vw,274.6px)] left-[min(13.65vw,196.64px)]"
+      />
+      <IcHeroRight
+        class="hidden absolute"
+        md="block w-11vw top-0vw right-1vw"
+        lg="w-14vw top-4vw"
+        x2l="w-[min(13.88vw,200px)]  top-[min(6.1vw,97px)] right-0"
+      />
     </div>
     <div class="container max-w-full overflow-hidden">
       <div
